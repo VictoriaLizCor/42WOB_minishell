@@ -1,0 +1,38 @@
+{
+   readline
+   Memcheck:Leak
+   obj:/usr/local/Cellar/readline/8.1.2/lib/libreadline.8.1.dylib\
+   ...
+}
+{
+   leak readline
+   Memcheck:Leak
+   ...
+   fun:add_history
+}
+{
+   leak readline
+   Memcheck:Leak
+    ...
+    fun:readline
+}
+{
+   libSystem_initializer
+   Memcheck:Leak
+   match-leak-kinds: definite
+   ...
+   fun:libSystem_initializer
+}
+{
+   libSystem_initializer
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   ...
+   fun:libSystem_initializer
+}
+{
+  calloc MacOS
+   Memcheck:Leak
+   ...
+   fun:calloc
+}
